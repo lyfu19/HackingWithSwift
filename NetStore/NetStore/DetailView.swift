@@ -61,16 +61,3 @@ struct DetailView: View {
     }
 }
 
-#Preview {
-    DetailView(user: User(id: "01eec130-b2e6-4da1-91e1-0bf85fe4a8d6", isActive: false, name: "Miriam Lloyd", age: 31, company: "Eyewax", email: "miriamlloyd@eyewax.com", address: "636 Diamond Street, Chumuckla, Massachusetts, 6191", about: "Ullamco non ut consequat anim officia laborum dolore Lorem ut proident adipisicing qui eu. Consectetur aute officia Lorem est magna sunt cupidatat magna quis laborum. Nostrud aliquip nisi duis velit elit ea labore labore qui ullamco veniam. Esse eiusmod aliquip magna magna culpa quis veniam do incididunt. Dolor ut aliquip magna consectetur aliqua cillum sunt incididunt id.", registered: .now, tags: [
-        "sit",
-        "dolor",
-        "tempor",
-        "elit",
-        "nisi",
-        "incididunt",
-        "veniam"
-    ], friends: [User.Friend(id: "8d90-4d2b-a6c7-0303f673ef2b", name: "Boyer Nieves"),
-                 User.Friend(id: "fc81-4858-985e-8e7b5a12c2a9", name: "Osborn Moss")
-                ]))
-}

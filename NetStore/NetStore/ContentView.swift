@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var UserVM = UserViewModel()
+    @Environment(\.modelContext) var modelContext
+    @State private var userVM = UserViewModel()
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(UserVM.users) { user in
+                ForEach(userVM.users) { user in
                     NavigationLink(value: user) {
                         VStack(alignment: .leading, spacing: 8) {
                             Text(user.name)
@@ -34,7 +35,8 @@ struct ContentView: View {
             }
         }
         .task {
-            await UserVM.loadUsers()
+            userVM.setModelContext(modelContext)
+            await userVM.loadUsers()
         }
     }
 }
